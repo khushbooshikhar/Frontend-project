@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: Include Font Awesome file here -->
+    <script src="https://kit.fontawesome.com/06f90e667d.js" crossorigin="anonymous"></script>
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="stylesheet" href="./styles/common.css"/>
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-body">
+    <!-- TODO: Include all your code for the header and home page here -->
+<diV class="containerhead">
+
+        <!-- Left side headings.. -->
+        <div class="head-left">
+                <h1 class="main-heading">ScriBBler</h1>
+                <h7 class="sub-heading"> Explore, Imagine, Create</h7>   
+        </div>
+    <!-- Right side headings.. -->
+        <div class="head-right">
+            <div class="buttons">
+                <button class="btn-index" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign Up</button>
+                <button class="btn-index" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">Sign In</button>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div id="signup" class="modal1"> 
+                
+            <form class="form1"> 
+                     
+                    <div class="headmod">
+                        <div class="headmodleft">
+                            <h3>Get Started</h3>
+                        </div>
+                        <div class="headmodright">
+                        <i class="fa fa-times" aria-hidden="true" onclick="document.getElementById('signup').style.display='none'"></i>
+                        </div>
+                    </div>
+
+                    <label><b>Name</b></label> 
+                    <input type="text" placeholder="Enter your name" required > 
+
+                    <label><b>Username</b></label> 
+                    <input type="text" placeholder="Enter your username"  required> 
+      
+                    <label><b>Password</b></label> 
+                    <input type="password" placeholder="Enter your Password"  required> 
+      
+                    <label><b>Confirm Password</b></label> 
+                    <input type="password" placeholder="Re-enter your Password" required > 
+                    
+                    <button  class="buttonmodal">Sign Up</button> 
+                         
+            </form> 
+        </div>
+
+         <!-- Sigin Modal -->
+        <div id="signin" class="modal2"> 
+            
+            <form class="form1"> 
+                     
+                    <div class="headmod">
+                        <div class="headmodleft">
+                        <h3>Welcome Back!</h3>
+                        </div>
+                        <div class="headmodright">
+                        <i class="fa fa-times" aria-hidden="true" onclick="document.getElementById('signin').style.display='none'"></i>
+                        </div>
+                    </div>
+
+                    <label><b>Username</b></label> 
+                    <input type="text" placeholder="Enter your username"  required> 
+      
+                    <label><b>Password</b></label> 
+                    <input type="password" placeholder="Enter your Password"  required> 
+      
+                        <button  class="buttonmodal">Sign In</button> 
+                    <div class="footmod">Not a member? <span class="highlight" onclick="document.getElementById('signup').style.display='block';document.getElementById('signin').style.display='none'"  style="width:auto;" > Sign Up</span></div>
+                
+            </form> 
+        </div> 
+
+
+</diV>
+   
+<div class="container">
+    <button class="buttoncentre" onclick="navigateToBlogList()">All Posts</button>
+    <button class="buttoncentre" onclick="document.getElementById('create').style.display='block'" style="width:auto;">Create Post</button>
+
+</div>
+
+ <!-- Create Post Modal -->
+
+<div id="create" class="modal3"> 
+                
+    <form class="form2"> 
+             
+            <div class="headmod">
+                <div class="headmodleft">
+                    <h3>Pen Your Post</h3>
+                </div>
+            <div class="headmodright">
+                <i class="fa fa-times" aria-hidden="true" onclick="document.getElementById('create').style.display='none'"></i>
+            </div>
+
+            </div>
+            <div class="modbody">
+
+            <label><b>Title</b></label> 
+            <input class = "text-areas" type="text" placeholder="Enter title of your post" > 
+
+            <label><b>Contents</b></label> 
+            <textarea  class = "text-areas" placeholder="Enter the contents of your post" rows="15%" cols="90%"  ></textarea>
+
+            <button  class="buttonmodal1">Create</button>
+        
+        </div>
+        
+    </form> 
+</div> 
+
+    <script src="./scripts/common.js" ></script>
+    <script src="./scripts/index.js" ></script>
+
+</body>
+
+</html>
